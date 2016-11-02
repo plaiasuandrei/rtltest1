@@ -37,7 +37,7 @@ sap.ui.define([
 			oView = this.getView();
 
 			oView.bindElement({
-				path : "ZinvoiceHSet('" + oArgs.Invoiceid + "')",
+				path : "/ZinvoiceHSet('" + oArgs.Invoiceid + "')",
 				events : {
 					change: this._onBindingChange.bind(this),
 					dataRequested: function (oEvent) {
@@ -53,7 +53,7 @@ sap.ui.define([
 		_onBindingChange : function (oEvent) {
 			// No data for the binding
 			if (!this.getView().getBindingContext()) {
-				this.getRouter().getTargets().display("notFound");
+				this.getRouter().getTargets().display("not_found");
 			}
 		}
 

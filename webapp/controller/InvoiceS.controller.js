@@ -1,6 +1,7 @@
 sap.ui.define([
-	"RTLtest1/controller/BaseController"
-], function(BaseController) {
+	"RTLtest1/controller/BaseController",
+	"sap/ui/model/Filter"
+], function(BaseController, Filter ) {
 	"use strict";
 
 	return BaseController.extend("RTLtest1.controller.InvoiceS", {
@@ -51,9 +52,26 @@ sap.ui.define([
 				Invoiceid : oCtx.getProperty("Invoiceid")
 			});
 
+		},
+		
+		onSearch : function (oEvt) {
+ 
+			// add filter for search
+			var aFilters = [];
+			var sQuery = oEvt.getSource().getValue();
+			if (sQuery && sQuery.length > 0) {
+				var filter = new Filter("Vendorname", sap.ui.model.FilterOperator.Contains, sQuery);
+				aFilters.push(filter);
+				filter = new Filter("ItemDescription", sap.ui.model.FilterOperator.Contains, sQuery);
+				aFilters.push(filter);
+
+			}
+ 
+			// update list binding
+			var list = this.getView().byId("invoiceList");
+			var binding = list.getBinding("items");
+			binding.filter(aFilters, "Application");
 		}
-
-
 	});
 
 });

@@ -83,7 +83,7 @@
 				"controlAggregation": "pages",
 				"transition": "slide",
 				"bypassed": {
-					"target": "notFound"
+					"target": "not_found"
 				}
 			},
 			"routes": [{
