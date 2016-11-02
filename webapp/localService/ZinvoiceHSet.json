@@ -14,8 +14,7 @@
 	"PoId": 9000,
 	"Wbs": "WBS10",
 	"Costcenter": "CC10",
-	"Glaccount": 6000,
-	"CompanyCode": "CC4"
+	"Glaccount": 6000
 }, {
 	"__metadata": {
 		"id": "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('11')",
@@ -32,8 +31,7 @@
 	"PoId": 9000,
 	"Wbs": "WBS10",
 	"Costcenter": "CC10",
-	"Glaccount": 6000,
-	"CompanyCode": "Company"
+	"Glaccount": 6000
 }, {
 	"__metadata": {
 		"id": "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('12')",
@@ -50,8 +48,7 @@
 	"PoId": 9000,
 	"Wbs": "WBS10",
 	"Costcenter": "CC10",
-	"Glaccount": 6000,
-	"CompanyCode": "CC1"
+	"Glaccount": 6000
 }, {
 	"__metadata": {
 		"id": "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('13')",
@@ -68,8 +65,7 @@
 	"PoId": 9000,
 	"Wbs": "WBS10",
 	"Costcenter": "CC10",
-	"Glaccount": 6000,
-	"CompanyCode": "CC3"
+	"Glaccount": 6000
 }, {
 	"__metadata": {
 		"id": "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('14')",
@@ -86,6 +82,5 @@
 	"PoId": 9000,
 	"Wbs": "WBS10",
 	"Costcenter": "CC10",
-	"Glaccount": 6000,
-	"CompanyCode": "CC3"
+	"Glaccount": 6000
 }]

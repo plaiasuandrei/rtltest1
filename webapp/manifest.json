@@ -8,8 +8,8 @@
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"title": "",
-		"description": "",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
 		"resources": "resources.json",
 		"ach": "ach",
 		"sourceTemplate": {
@@ -81,17 +81,32 @@
 				"viewPath": "RTLtest1.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
-				"transition": "slide"
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				}
 			},
 			"routes": [{
 				"pattern": "",
 				"name": "invoices",
 				"target": "invoices"
+			},	{
+				"pattern": "details/{Invoiceid}",
+				"name": "details",
+				"target": "details"
 			}],
 			"targets": {
 				"invoices": {
 					"viewName": "InvoiceS",
-					"viewLevel" : 1
+					"viewLevel": 1
+				},
+				"not_found": {
+					"viewName": "not_found",
+					"transition": "show"
+				},
+				"details" : {
+					"viewName": "InvoiceD",
+					"viewLevel": 2
 				}
 			}
 		},

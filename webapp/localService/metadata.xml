@@ -17,6 +17,8 @@
 					Nullable="false" Type="Edm.Int32"/>
 				<Property Name="ItemDescription" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
 					sap:label="Description" MaxLength="40" Nullable="false" Type="Edm.String"/>
+				<Property Name="CompanyCode" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
+					sap:label="CompanyCode" MaxLength="40" Nullable="false" Type="Edm.String"/>
 				<Property Name="ItemValue" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Number"
 					Nullable="false" Type="Edm.Int32"/>
 				<Property Name="ItemCur" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Currency"

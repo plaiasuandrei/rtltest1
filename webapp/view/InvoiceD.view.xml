@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="RTLtest1.controller.InvoiceD">
+	<Page title="Page" id="__page1">
+		<content>
+			<ObjectListItem type="Active" counter="0" title="Object list item" number="9999999999" numberUnit="eur" intro="On behalf of John Doe"
+				markFavorite="false" markFlagged="false" showMarkers="false" id="__item0">
+				<attributes>
+					<ObjectAttribute text="attribute text" active="false" id="__attribute0"/>
+				</attributes>
+			</ObjectListItem>
+		</content>
+	</Page>
+</mvc:View>

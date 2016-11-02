@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"RTLtest1/controller/BaseController"
+], function(BaseController) {
 	"use strict";
 
-	return Controller.extend("RTLtest1.controller.InvoiceS", {
+	return BaseController.extend("RTLtest1.controller.InvoiceS", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -39,6 +39,20 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
+
+		// when the item in the invoiceS list is pressed we navigate to a detail page
+		onInvoicePress: function(oEvent){
+			var oItem, oCtx;
+
+			oItem = oEvent.getSource();
+			oCtx = oItem.getBindingContext();
+
+			this.getRouter().navTo("details",{
+				Invoiceid : oCtx.getProperty("Invoiceid")
+			});
+
+		}
+
 
 	});
 
