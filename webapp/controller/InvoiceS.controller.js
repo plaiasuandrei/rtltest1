@@ -1,7 +1,7 @@
 sap.ui.define([
 	"RTLtest1/controller/BaseController",
 	"sap/ui/model/Filter"
-], function(BaseController, Filter ) {
+], function(BaseController, Filter) {
 	"use strict";
 
 	return BaseController.extend("RTLtest1.controller.InvoiceS", {
@@ -42,35 +42,34 @@ sap.ui.define([
 		//	}
 
 		// when the item in the invoiceS list is pressed we navigate to a detail page
-		onInvoicePress: function(oEvent){
+		onInvoicePress: function(oEvent) {
 			var oItem, oCtx;
 
 			oItem = oEvent.getSource();
 			oCtx = oItem.getBindingContext();
 
-			this.getRouter().navTo("details",{
-				Invoiceid : oCtx.getProperty("Invoiceid")
+			this.getRouter().navTo("details", {
+				Invoiceid: oCtx.getProperty("Invoiceid")
 			});
 
 		},
-		
-		onSearch : function (oEvt) {
- 
+
+		onSearch: function(oEvt) {
+
 			// add filter for search
 			var aFilters = [];
 			var sQuery = oEvt.getSource().getValue();
 			if (sQuery && sQuery.length > 0) {
-				var filter = new Filter("Vendorname", sap.ui.model.FilterOperator.Contains, sQuery);
-				aFilters.push(filter);
-				filter = new Filter("ItemDescription", sap.ui.model.FilterOperator.Contains, sQuery);
-				aFilters.push(filter);
-
+				var oFilter1 = [new sap.ui.model.Filter("Vendorname", sap.ui.model.FilterOperator.Contains, sQuery), 
+								new sap.ui.model.Filter("ItemDescription", sap.ui.model.FilterOperator.Contains, sQuery)];
+				var allFilters = new sap.ui.model.Filter(oFilter1, false);
+				aFilters.push(allFilters);
 			}
- 
+
 			// update list binding
-			var list = this.getView().byId("invoiceList");
-			var binding = list.getBinding("items");
-			binding.filter(aFilters, "Application");
+			sap.ui.getCore().byId("invoiceList").getBinding("items").filter(aFilters, "Application");
+
+			
 		}
 	});
 
