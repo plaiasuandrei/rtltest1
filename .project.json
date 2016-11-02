@@ -22,7 +22,7 @@
     {
       "templateId": "ui5template.basicSAPUI5ApplicationComponent",
       "templateVersion": "1.4.0",
-      "dateTimeStamp": "Wed, 02 Nov 2016 18:19:17 GMT"
+      "dateTimeStamp": "Wed, 02 Nov 2016 18:24:35 GMT"
     }
   ],
   "translation": {
@@ -35,6 +35,9 @@
   "dataBinding": {
     "/webapp/view/View1.view.xml": {
       "entitySet": "Entity1_Set"
+    },
+    "/webapp/view/InvoiceS.view.xml": {
+      "entitySet": "ZinvoiceHSet"
     }
   },
   "mockpreview": {

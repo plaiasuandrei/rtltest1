@@ -1,38 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
-	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
 	<edmx:DataServices m:DataServiceVersion="2.0">
-		<Schema Namespace="Demo" sap:schema-version="1" xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityType Name="Entity1">
+		<Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZRTLTEST_SRV">
+			<EntityType sap:content-version="1" Name="ZinvoiceH">
 				<Key>
-					<PropertyRef Name="Id"/>
+					<PropertyRef Name="Invoiceid"/>
 				</Key>
-				<Property Name="Id" Nullable="false" Type="Edm.String"/>
-				<Property Name="field1" Nullable="false" Type="Edm.String"/>
-				<Property Name="field2" Nullable="false" Type="Edm.String"/>
+				<Property Name="Invoiceid" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="ID"
+					MaxLength="10" Nullable="false" Type="Edm.String"/>
+				<Property Name="Vendorid" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
+					sap:label="BusinessPartner" MaxLength="10" Nullable="false" Type="Edm.String"/>
+				<Property Name="Vendorname" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Description"
+					MaxLength="50" Nullable="false" Type="Edm.String"/>
+				<Property Name="Itemno" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Number"
+					Nullable="false" Type="Edm.Int32"/>
+				<Property Name="ItemDescription" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
+					sap:label="Description" MaxLength="40" Nullable="false" Type="Edm.String"/>
+				<Property Name="ItemValue" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Number"
+					Nullable="false" Type="Edm.Int32"/>
+				<Property Name="ItemCur" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Currency"
+					MaxLength="5" Nullable="false" Type="Edm.String" sap:semantics="currency-code"/>
+				<Property Name="PoId" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Number"
+					Nullable="false" Type="Edm.Int32"/>
+				<Property Name="Wbs" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
+					sap:label="Character Field Length = 10" MaxLength="10" Nullable="false" Type="Edm.String"/>
+				<Property Name="Costcenter" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false"
+					sap:label="Character Field Length = 10" MaxLength="10" Nullable="false" Type="Edm.String"/>
+				<Property Name="Glaccount" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Number"
+					Nullable="false" Type="Edm.Int32"/>
 			</EntityType>
-			<EntityType Name="Entity2">
-				<Key>
-					<PropertyRef Name="Id"/>
-				</Key>
-				<Property Name="Id" Nullable="false" Type="Edm.String"/>
-				<Property Name="field1" Nullable="false" Type="Edm.String"/>
-				<Property Name="field2" Nullable="false" Type="Edm.Decimal"/>
-				<Property Name="field3" Nullable="false" Type="Edm.String"/>
-			</EntityType>
-			<EntityType Name="Entity3">
-				<Key>
-					<PropertyRef Name="Id"/>
-				</Key>
-				<Property Name="Id" Nullable="false" Type="Edm.String"/>
-				<Property Name="field1" Type="Edm.Int16"/>
-				<Property Name="field2" Nullable="false" Type="Edm.String"/>
-			</EntityType>
-			<EntityContainer Name="DemoSetContainer" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-				<EntitySet EntityType="Demo.Entity1" Name="Entity1_Set"/>
-				<EntitySet EntityType="Demo.Entity2" Name="Entity2_Set"/>
-				<EntitySet EntityType="Demo.Entity3" Name="Entity3_Set"/>
+			<EntityContainer Name="ZRTLTEST_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+				<EntitySet sap:content-version="1" Name="ZinvoiceHSet" sap:updatable="false" sap:creatable="false" sap:addressable="false"
+					sap:pageable="false" sap:deletable="false" EntityType="ZRTLTEST_SRV.ZinvoiceH"/>
 			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/$metadata"
+				rel="self"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/$metadata"
+				rel="latest-version"/>
 		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>

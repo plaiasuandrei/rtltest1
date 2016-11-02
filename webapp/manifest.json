@@ -48,7 +48,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "RTLtest1.view.View1",
+			"viewName": "RTLtest1.view.app",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -72,6 +72,27 @@
 			},
 			"": {
 				"dataSource": "mainService"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "RTLtest1.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "invoices",
+				"target": "invoices"
+			}],
+			"targets": {
+				"invoices": {
+					"viewName": "InvoiceS",
+					"viewLevel" : 1
+				}
 			}
 		},
 		"resources": {

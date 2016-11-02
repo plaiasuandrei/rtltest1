@@ -1,0 +1,92 @@
+[
+      {
+        "__metadata" : {
+          "id" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('10')",
+          "uri" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('10')",
+          "type" : "ZRTLTEST_SRV.ZinvoiceH"
+        },
+        "Invoiceid" : "10",
+        "Vendorid" : "34",
+        "Vendorname" : "RTLtest34",
+        "Itemno" : 2,
+        "ItemDescription" : "Item 2 of rtl34",
+        "ItemValue" : 200,
+        "ItemCur" : "EUR",
+        "PoId" : 9000,
+        "Wbs" : "WBS10",
+        "Costcenter" : "CC10",
+        "Glaccount" : 6000
+      },
+      {
+        "__metadata" : {
+          "id" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('11')",
+          "uri" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('11')",
+          "type" : "ZRTLTEST_SRV.ZinvoiceH"
+        },
+        "Invoiceid" : "11",
+        "Vendorid" : "34",
+        "Vendorname" : "RTLtest34",
+        "Itemno" : 3,
+        "ItemDescription" : "Item 3 of rtl34",
+        "ItemValue" : 234,
+        "ItemCur" : "USD",
+        "PoId" : 9000,
+        "Wbs" : "WBS10",
+        "Costcenter" : "CC10",
+        "Glaccount" : 6000
+      },
+      {
+        "__metadata" : {
+          "id" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('12')",
+          "uri" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('12')",
+          "type" : "ZRTLTEST_SRV.ZinvoiceH"
+        },
+        "Invoiceid" : "12",
+        "Vendorid" : "340",
+        "Vendorname" : "RTLtest340",
+        "Itemno" : 2,
+        "ItemDescription" : "Item 2 of rtl340",
+        "ItemValue" : 200,
+        "ItemCur" : "EUR",
+        "PoId" : 9000,
+        "Wbs" : "WBS10",
+        "Costcenter" : "CC10",
+        "Glaccount" : 6000
+      },
+      {
+        "__metadata" : {
+          "id" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('13')",
+          "uri" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('13')",
+          "type" : "ZRTLTEST_SRV.ZinvoiceH"
+        },
+        "Invoiceid" : "13",
+        "Vendorid" : "340",
+        "Vendorname" : "RTLtest340",
+        "Itemno" : 10,
+        "ItemDescription" : "Item 10 of rtl340",
+        "ItemValue" : 345,
+        "ItemCur" : "EUR",
+        "PoId" : 9000,
+        "Wbs" : "WBS10",
+        "Costcenter" : "CC10",
+        "Glaccount" : 6000
+      },
+      {
+        "__metadata" : {
+          "id" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('14')",
+          "uri" : "http://sesvdc10.sap.ses.com:8000/sap/opu/odata/sap/ZRTLTEST_SRV/ZinvoiceHSet('14')",
+          "type" : "ZRTLTEST_SRV.ZinvoiceH"
+        },
+        "Invoiceid" : "14",
+        "Vendorid" : "340",
+        "Vendorname" : "RTLtest340",
+        "Itemno" : 20,
+        "ItemDescription" : "Item 20 of rtl340",
+        "ItemValue" : 67,
+        "ItemCur" : "EUR",
+        "PoId" : 9000,
+        "Wbs" : "WBS10",
+        "Costcenter" : "CC10",
+        "Glaccount" : 6000
+      }
+    ]
