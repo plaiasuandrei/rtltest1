@@ -67,7 +67,7 @@ sap.ui.define([
 			}
 
 			// update list binding
-			sap.ui.getCore().byId("invoiceList").getBinding("items").filter(aFilters, "Application");
+			this.getView().byId("invoiceList").getBinding("items").filter(aFilters, "Application");
 
 			
 		}
