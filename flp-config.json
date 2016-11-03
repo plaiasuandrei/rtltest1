@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "RTLtest1",
+        "description": "First App with mock data",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#RTLtest1-Display",
+        "navigationComponentName": "RTLtest1",
+        "intentSemanticObject": "RTLtest1",
+        "intentAction": "Display",
+        "html5ApplicationName": "rtltest1",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "52508e4a-881b-49bc-873c-159d72cd34f6"
+        ],
+        "contentPackages": [
+            "156a4b18-809b-4407-b0ed-dd24668e87c8"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Assign Invoice Responsible - mock data",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Assign Invoice Responsible - mock data,Subtitle",
+        "displayIconUrl": "sap-icon://switch-classes",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

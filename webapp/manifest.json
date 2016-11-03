@@ -43,7 +43,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
@@ -86,15 +89,18 @@
 					"target": "not_found"
 				}
 			},
-			"routes": [{
-				"pattern": "",
-				"name": "invoices",
-				"target": "invoices"
-			},	{
-				"pattern": "details/{Invoiceid}",
-				"name": "details",
-				"target": "details"
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "invoices",
+					"target": "invoices"
+				},
+				{
+					"pattern": "details/{Invoiceid}",
+					"name": "details",
+					"target": "details"
+				}
+			],
 			"targets": {
 				"invoices": {
 					"viewName": "InvoiceS",
@@ -104,16 +110,22 @@
 					"viewName": "not_found",
 					"transition": "show"
 				},
-				"details" : {
+				"details": {
 					"viewName": "InvoiceD",
 					"viewLevel": 2
 				}
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

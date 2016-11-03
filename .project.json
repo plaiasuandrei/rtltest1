@@ -49,5 +49,10 @@
     "loadJSONFiles": true,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
+  },
+  "hcpdeploy": {
+    "account": "s0007787233trial",
+    "name": "rtltest1",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }
