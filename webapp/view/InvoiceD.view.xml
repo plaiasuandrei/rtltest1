@@ -1,40 +1,51 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="RTLtest1.controller.InvoiceD">
-	<Page id="__page1" title="{Vendorname}" showNavButton="true" showSubHeader="false">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="RTLtest1.controller.InvoiceD">
+	<Page id="__page1" title="{Vendorname}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
 			<IconTabBar id="__bar0" expanded="false">
-			<items>
-			    <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" icon="sap-icon://customer" iconColor="Positive" id="__filter4">
-			        <content>
-			            <ObjectListItem xmlns="sap.m" type="Active" counter="0" numberUnit="eur{ItemCur}" markFavorite="false" markFlagged="false" showMarkers="false" id="__item0" title="{Vendorname}" number="{ItemValue}">
-			                <attributes>
-			                    <ObjectAttribute active="false" id="__attribute0" text="{ItemDescription}"/>
-			                    <ObjectAttribute xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" active="false" id="__attribute0_copy" text="{CompanyCode}"/>
-			                    </attributes>
-			                
-			            </ObjectListItem>
-			        </content>
-			    </IconTabFilter>
-			    <IconTabSeparator xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" id="__separator0"/>
-			    <IconTabFilter count="3" icon="sap-icon://attachment" id="__filter3">
-			        <content>
-			            <StandardListItem type="Navigation" counter="0" title="List Item" description="Description text" id="__item4"/>
-			            <StandardListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" type="Navigation" counter="0" title="List Item" description="Description text" id="__item4_copy"/>
-			            <StandardListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" type="Navigation" counter="0" title="List Item" description="Description text" id="__item4_copy2"/>
-			        </content>
-			    </IconTabFilter>
-			</items>
+				<items>
+					<IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+						icon="sap-icon://customer" iconColor="Positive" id="__filter4">
+						<content>
+							<ObjectListItem xmlns="sap.m" type="Active" counter="0" numberUnit="eur{ItemCur}" markFavorite="false" markFlagged="false"
+								showMarkers="false" id="__item0" title="{Vendorname}" number="{ItemValue}">
+								<attributes>
+									<ObjectAttribute active="false" id="__attribute0" text="{ItemDescription}"/>
+									<ObjectAttribute xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" active="false"
+										id="__attribute0_copy" text="{CompanyCode}"/>
+								</attributes>
+							</ObjectListItem>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+						id="__separator0"/>
+					<IconTabFilter count="3" icon="sap-icon://attachment" id="__filter3">
+						<content>
+							<StandardListItem type="Navigation" counter="0" title="List Item" description="Description text" id="__item4"/>
+							<StandardListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+								type="Navigation" counter="0" title="List Item" description="Description text" id="__item4_copy"/>
+							<StandardListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+								type="Navigation" counter="0" title="List Item" description="Description text" id="__item4_copy2"/>
+						</content>
+					</IconTabFilter>
+				</items>
 			</IconTabBar>
-			<SearchField width="100%" placeholder="Search PO" id="__field0" enableSuggestions="true"/>
+			<SearchField width="100%" placeholder="Search PO" id="searchpo" enableSuggestions="true" suggest="onSuggest"
+				suggestionItems="{ path: 'ponumbers>/POCollection', sorter: { path: 'POId' } }" search="onSearch">
+				<suggestionItems>
+					<SuggestionItem text="{ponumbers>PODescription}" description="{ponumber>PODescription}" key="{POId}"/>
+				</suggestionItems>
+			</SearchField>
 		</content>
-	<subHeader>
-	    <Bar id="__bar2">
-	        <contentLeft>
-	            <Text maxLines="0" id="__text6" text="{ItemDescription}"/>
-	        </contentLeft>
-	    <contentRight>
-	        <Text maxLines="0" id="__text7" text="{ItemValue}{ItemCur}"/>
-	    </contentRight>
-	    </Bar>
-	</subHeader>
+		<subHeader>
+			<Bar id="__bar2">
+				<contentLeft>
+					<Text maxLines="0" id="__text6" text="{ItemDescription}"/>
+				</contentLeft>
+				<contentRight>
+					<Text maxLines="0" id="__text7" text="{ItemValue}{ItemCur}"/>
+				</contentRight>
+			</Bar>
+		</subHeader>
 	</Page>
 </mvc:View>
