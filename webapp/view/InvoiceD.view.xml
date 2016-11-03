@@ -33,7 +33,7 @@
 			<SearchField width="100%" placeholder="Search PO" id="searchpo" enableSuggestions="true" suggest="onSuggest"
 				suggestionItems="{ path: 'ponumbers>/POCollection', sorter: { path: 'POId' } }" search="onSearch">
 				<suggestionItems>
-					<SuggestionItem text="{ponumbers>PODescription}" description="{ponumber>PODescription}" key="{POId}"/>
+					<SuggestionItem text="{ponumbers>POId} - {ponumbers>PODescription}" description="{path:'ponumber>POId'} {path:'ponumber>PODescription'}" key="{ponumber>POId}"/>
 				</suggestionItems>
 			</SearchField>
 		</content>
