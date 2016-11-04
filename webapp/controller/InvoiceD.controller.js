@@ -12,7 +12,13 @@ sap.ui.define([
 			 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 			 * @memberOf RTLtest1.view.InvoiceD
 			 */
+			 
+			 
+			 
+			 
 			onInit: function() {
+				this.rejectionVisible = false;
+			
 				var oRouter = this.getRouter();
 				oRouter.getRoute("details").attachMatched(this._onRouteMatched, this);
 
