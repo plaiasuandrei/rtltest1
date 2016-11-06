@@ -12,7 +12,7 @@
     {
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
-      "dateTimeStamp": "Wed, 13 Jan 2016 12:57:19 GMT"
+      "dateTimeStamp": "Sun, 06 Nov 2016 07:12:35 GMT"
     },
     {
       "templateId": "wysiwygtemplate.quickStart",
@@ -32,27 +32,27 @@
     "defaultI18NPropertyFile": "i18n.properties",
     "resourceModelName": "i18n"
   },
-  "dataBinding": {
-    "/webapp/view/View1.view.xml": {
-      "entitySet": "Entity1_Set"
-    },
-    "/webapp/view/InvoiceS.view.xml": {
-      "entitySet": "ZinvoiceHSet"
-    },
-    "/webapp/view/InvoiceD.view.xml": {
-      "entitySet": "ZinvoiceHSet"
-    }
-  },
-  "mockpreview": {
-    "mockUri": "localService/metadata.xml",
-    "metadataFilePath": "localService/metadata.xml",
-    "loadJSONFiles": true,
-    "loadCustomRequests": false,
-    "mockRequestsFilePath": ""
-  },
   "hcpdeploy": {
     "account": "s0007787233trial",
     "name": "rtltest1",
     "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "mockpreview": {
+    "mockUri": "/odata/SAP/ZZOCR_INOICE_ALLOCATION_SRV/",
+    "metadataFilePath": "localService/metadata.xml",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "dataBinding": {
+    "/webapp/view/not_found.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/webapp/view/InvoiceS.view.xml": {
+      "entitySet": "ocrInvoiceSet"
+    },
+    "/webapp/view/InvoiceD.view.xml": {
+      "entitySet": "ocrInvoiceSet"
+    }
   }
 }

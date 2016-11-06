@@ -1,13 +1,13 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="RTLtest1.controller.InvoiceS">
-	<Page title="Invoices" showNavButton="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="RTLtest1.controller.InvoiceS">
+	<Page xmlns="sap.m" title="Invoices" showNavButton="true">
 		<content>
 			<PullToRefresh id="__refresh0"/>
-			<SearchField width="100%" placeholder="Search" id="__field0" liveChange="onSearch"/>
-			<List noDataText="Drop list items here" id="invoiceList" items="{/ZinvoiceHSet}">
+			<SearchField id="__field0" placeholder="Search" width="100%" liveChange="onSearch"/>
+			<List id="invoiceList" items="{/ocrInvoiceSet}" noDataText="Drop list items here">
 				<items>
-					<ObjectListItem type="Navigation" counter="0" intro="intro text" markFavorite="false" markFlagged="false" showMarkers="false" id="__item3" title="{Vendorname}" number="{ItemValue}" numberUnit="{ItemCur}" press="onInvoicePress">
+					<ObjectListItem id="__item3" type="Navigation" press="onInvoicePress" counter="0" markFavorite="false" markFlagged="false" showMarkers="false" title="{RdVendorName}" number="{Wrbtr}" numberUnit="{Waers}">
 						<attributes>
-							<ObjectAttribute active="false" id="__attribute0" text="{ItemDescription}"/>
+							<ObjectAttribute id="__attribute0" active="false" text="{Sgtxt}"/>
 						</attributes>
 					</ObjectListItem>
 				</items>

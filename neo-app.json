@@ -18,6 +18,14 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/odata",
+      "target": {
+        "type": "destination",
+        "name": "ODATA"
+      },
+      "description": "ODATA"
     }
   ],
   "sendWelcomeFileRedirect": true,

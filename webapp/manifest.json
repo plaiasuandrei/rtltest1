@@ -18,12 +18,20 @@
 		},
 		"dataSources": {
 			"mainService": {
+				"uri": "/odata/SAP/ZZOCR_INOICE_ALLOCATION_SRV/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
-				},
-				"uri": "localService/metadata.xml"
+				}
+			},
+			"ZZOCR_INOICE_ALLOCATION_SRV": {
+				"uri": "/odata/SAP/ZZOCR_INOICE_ALLOCATION_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZZOCR_INOICE_ALLOCATION_SRV/metadata.xml"
+				}
 			}
 		}
 	},
